@@ -40,10 +40,10 @@ const resolveXYZArray = (checkObject: StringObject, unpredictable: Unpredictable
     if (!checkObject || !unpredictable) return null;
 
     // Call findAllKeys to get all occurrences of the 'xyz' key within the unpredictable object
-    let keys = findAllKeys(unpredictable);
+    let keys_values = findAllKeys(unpredictable);
 
     // Find the first 'xyz' array that contains the checkObject by comparing their JSON string representations
-    return keys.find(x => JSON.stringify(checkObject) === JSON.stringify(x));
+    return keys_values.find(x => JSON.stringify(checkObject) === JSON.stringify(x));
 
     // If you want to return all 'xyz' arrays containing the checkObject, use the filter method instead:
     // return keys.filter(x => JSON.stringify(checkObject) === JSON.stringify(x));
